@@ -7,10 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onbeforeunload="return confirm();">
     <noscript>You need to have Javascript enabled to use this page!</noscript>
     <!-- <button id="submitBttn">Run</button> -->
     <textarea id="htmlArea" spellcheck="false"></textarea>
     <iframe id="result" srcdoc="&lt;html&gt;&lt;body style=&quot;background-color: white;&quot;&gt;"></iframe>
+
+    <!-- Confirm whether the user really wants to leave-->
+    <script>
+        function confirm() {
+            return "Are you sure?";
+        }
+    </script>
 </body>
 </html>
